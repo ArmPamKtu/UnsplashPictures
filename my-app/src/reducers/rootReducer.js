@@ -1,15 +1,9 @@
 import { combineReducers } from 'redux';
-import simpleReducer from './simpleReducer';
-import infoReducer from './infoReducer';
-
-/*
-export default combineReducers({
-    simpleReducer
-});*/
+import queryReducer from './queryReducer';
 
 
 const allReducers = combineReducers({
-    info: infoReducer //galima testi visus
+    queries: queryReducer
 });
 
 export default allReducers;
