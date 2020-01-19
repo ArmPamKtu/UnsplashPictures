@@ -7,13 +7,15 @@ function queries(state = initialQueryState, action) {
         case "ADD_QUERY": 
             let alreadyExists = state.list.includes(action.query);
 
-            if(!alreadyExists) {
+            if(!alreadyExists && action.query !== "") {
                 return {
                     ...state,
                     list: [...state.list, action.query]
                 }
             }
-            break;           
+            break;
+        default:
+            return state;            
     }
     return state;
 }

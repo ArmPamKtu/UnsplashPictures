@@ -3,16 +3,40 @@
     margin-bottom: 25px;
   
     &__search-field {
-      border: 2px solid grey;
-      width: 25%;
-      padding: 5px;
-      margin-right: 40px;
+      border: 2px solid#ed1d55;
       border-radius: 10px;
+      color: #3e3c4e;
+      font-family: "Raleway",sans-serif;
+      font-size: 1.25rem;
+      transition: border 0.5s;
+      margin-right: calc(35% - 24px);
+      padding: 10px;
+      width: 25%;
+
+      &:focus {
+        border: 2px solid#b40031;
+      }
     }
   
     &__button {
+      color: #fff;
+      font-family: "Raleway",sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      background-color:#ed1d55;
       border: none;
-      padding: 10px;
-      border-radius: 10px;
+      border-radius: 24px;
+      padding: 12px 20px;
+      text-align: center;
+      transition: background-color 0.5s;
+      white-space: normal;
+
+      &--first {
+        margin-right: 25px;
+      }
+
+      &:focus {
+        background-color: #b40031;
+      }
     } 
 }

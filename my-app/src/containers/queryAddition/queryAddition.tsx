@@ -3,10 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addQuery } from '../../action-initiators/queryAction';
 
-
-
 class QueryAddition extends Component <{addQuery: any, query: string}> {
-
     render() {
         return (
             <button onClick={() => this.props.addQuery(this.props.query)} className="search-container__button">Save Query</button> 
