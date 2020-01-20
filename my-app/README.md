@@ -23,9 +23,11 @@ This will open [http://localhost:3000](http://localhost:3000) to view the websit
 ## Examples of use
 
 ***Searching by keywords***
+
 ![Searching by keyword](./images/searching.gif)
 
 ***Searching using queries***
+
 ![Using queries](./images/usingQueries.gif)
 
 ## Technologies
