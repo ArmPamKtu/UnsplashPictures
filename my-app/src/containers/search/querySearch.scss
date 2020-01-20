@@ -53,33 +53,18 @@
     &__button-group {
       display: flex;
     }
+}
 
-  @media (max-width: 1124px) {
-    #{$_this}__search-field {
-      margin-right: calc(15% - 24px);
-    }
+@media (max-width: 1124px) {
+  .search-container__search-field {
+    margin-right: calc(15% - 24px);
   }
 }
 
 @media (max-width: 576px) {
   .search-container__search-field {
-    width: 200px;
-    min-width: 200px;
-  }
-
-  .search-container__button-group {
-    margin-top: 25px;
-  }
-
-  .search-container {
-    display: block;
-  }
-}
-
-@media (max-width: 576px) {
-  .search-container__search-field {
-    width: 200px;
-    min-width: 200px;
+    width: 250px;
+    min-width: 250px;
   }
 
   .search-container__button-group {

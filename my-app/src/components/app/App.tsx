@@ -7,12 +7,14 @@ import './App.scss';
 
 const App = () => {
 
+    const [firstLoad, setFirstLoad] = useState(true);
     const [query, setQuery] = useState("");
     const [loading, setLoading] = useState(false);
     const [mappedImages, setMappedImages] = useState([]);
 
 
     const searchPhotos = (query : string ) => {
+      setFirstLoad(false);
       const fullQuery = query.replace(/ /g, "-");
       let clientId = '595bc6100e61af007c0c3d15c2fb2a87774de20d04fecfe4c7cb05c5776cb869';
       let url = 
@@ -29,9 +31,7 @@ const App = () => {
                 id: item.id,
                 src: item.urls.regular,
                 alt: item.alt_description,
-                desctiption: item.description,
-                downloadLink: item.links.download,
-                downloadTrigger: item.download_location + "?client_id=595bc6100e61af007c0c3d15c2fb2a87774de20d04fecfe4c7cb05c5776cb869",
+                description: item.description,
                 owner: item.user.name,
                 referralLink: item.user.links.html + "?utm_source=Image_Fetcher&utm_medium=referral",
               } 
@@ -56,7 +56,7 @@ const App = () => {
           <div className="content-wrapper__message">Loading </div>
         :
           <div className="content-wrapper__query-search">
-            < Images mappedImages={mappedImages}/>
+            < Images mappedImages={mappedImages} firstLoad={firstLoad}/>
             < QueryList setQuery={setQuery} search={searchPhotos}/>
           </div>
         }
