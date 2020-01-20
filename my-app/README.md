@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Unsplash Searcher
 
-## Available Scripts
+This is a website that allows you to search photos from unsplash by keywords and store your searched queries, so you can search them instantly again when wanted.
 
-In the project directory, you can run:
 
-### `npm start`
+## How to start
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+All required packages are already in the project. To start the project type in the script command `npm start` <br />
+This will open [http://localhost:3000](http://localhost:3000) to view the website in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+## Functionalities
+ 
+* Search Unsplash photos by typing in keywords in input field 
+* Multiple queries are supported, just type in your keywords seperated by a whitespace 
+* You can press the save query button, to save your query
+* If you have already saved queries before, simply clicking on them will search the query and display the photos
+* If no image has the keywords, a "No results found" message will appear <br />
+* When images are found, they will be displayed in a grid with their description, Photograher and a link to the Photographers Unsplash profile
+* While loading, a loading text will appear (***this function sadly does not work, as the request are too fast for a hooks state to change its values and for that reason the loading state doesnt change***)<br />
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Examples of use
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+***Searching by keywords***
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Searching by keyword](./images/searching.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+***Searching using queries***
 
-### `npm run eject`
+![Using queries](./images/usingQueries.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technologies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This web application was implemented using:
+1. ReactJS - projects framework
+2. Redux - for storing users queries
+3. scss - for styling components
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Other information
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[Unsplash Guidelines](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines)
