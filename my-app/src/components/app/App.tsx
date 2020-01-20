@@ -34,7 +34,6 @@ const App = () => {
                 downloadTrigger: item.download_location + "?client_id=595bc6100e61af007c0c3d15c2fb2a87774de20d04fecfe4c7cb05c5776cb869",
                 owner: item.user.name,
                 referralLink: item.user.links.html + "?utm_source=Image_Fetcher&utm_medium=referral",
-
               } 
           });
           setMappedImages(mappedImages);
@@ -54,9 +53,9 @@ const App = () => {
         />
 
         { loading ? 
-          <div>Loading </div>
+          <div className="content-wrapper__message">Loading </div>
         :
-          <div className="content">
+          <div className="content-wrapper__query-search">
             < Images mappedImages={mappedImages}/>
             < QueryList setQuery={setQuery} search={searchPhotos}/>
           </div>

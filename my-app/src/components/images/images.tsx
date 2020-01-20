@@ -21,9 +21,8 @@ const Images = (props: IImiges) => {
                         <div className="image-container__image-wrapper">
                             <img src={image.src} alt={image.alt} className="image-container__image"/>
                         </div>
-                        <p>Photographer: {image.owner}</p>
-                        <a href={image.referralLink} target="_blank" rel="noopener noreferrer">See profile</a>
-                      {/*  <a href={image.downloadLink} download={image.jpg} target="_blank">Download the photo</a>*/}
+                        <p className="image-container__text">Photographer: {image.owner}</p>
+                        <a className="image-container__link" href={image.referralLink} target="_blank" rel="noopener noreferrer">View profile</a>
                     </div>
                     )
                 })

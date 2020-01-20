@@ -17,15 +17,24 @@ const QuerySearch = (props: IQuerySearchProps) => {
         props.setQuery(e.target.value);
     };
 
+    const setComponents = async () => {
+      await props.setLoading(true);
+      props.search(props.query);
+    }
+
     return (
         <div className="search-container">
-            <input type="text" value={props.query} placeholder="Key words" onChange={(e) => onChangeHandle(e)} className="search-container__search-field"/>
-            <button onClick={() => {
-              props.setLoading(true);
-              props.search(props.query)
-            }} className="search-container__button search-container__button--first">Search</button>
+            <input type="text" value={props.query} 
+            placeholder="Key words" onChange={(e) => onChangeHandle(e)} 
+            className="search-container__search-field"/>
+            
+            <div className="search-container__button-group">
+              <button onClick={() => {
+                setComponents();
+              }} className="search-container__button search-container__button--first">Search</button>
 
-            <QueryAddition query={props.query}/>
+              <QueryAddition query={props.query}/>
+            </div>
         </div>
     );
 }
